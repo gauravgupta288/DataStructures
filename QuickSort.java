@@ -1,6 +1,6 @@
 package gg;
 
-public class Rest {
+public class QuickSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,7 +20,7 @@ public class Rest {
 	static int partition(int arr[], int low, int high) {
 		
 		int pivot = arr[high];
-		int i = low-1;
+		int i = low-1	;
 		
 		for (int j=low;j<high-1;j++) {
 			if(arr[j]<pivot) {
