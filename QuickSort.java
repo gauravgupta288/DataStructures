@@ -5,7 +5,7 @@ public class QuickSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Sorting started");
-		int arr[] = {1,3,2,4,5,7,6};
+		int arr[] = {100,1,32,4,5,3,56,2,53,6};
 		quickSort(arr, 0, arr.length-1);
 		
 		for(int i=0;i<arr.length;i++) {
@@ -22,7 +22,7 @@ public class QuickSort {
 		int pivot = arr[high];
 		int i = low-1	;
 		
-		for (int j=low;j<high-1;j++) {
+		for (int j=low;j<high;j++) {
 			if(arr[j]<pivot) {
 				i++;
 				swap(arr, i, j);

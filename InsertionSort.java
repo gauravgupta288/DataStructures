@@ -6,13 +6,10 @@ import java.util.Hashtable;
 import java.util.Map.Entry;
 import java.util.function.Function;
 
-public class Test {
+public class InsertionSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("gg");
-		
-		Function<Integer, Integer> f = (i,m)->i*i;
-		System.out.print(f.apply(10));
 		
 		int arr[] = {1,3,2,4,5,7,6,2};
 		for (int i=0;i<arr.length;i++) {
@@ -71,7 +68,7 @@ public class Test {
 		  }
 	  }
 	  System.out.println(hmap);
-	  Test t = new Test();
+	  InsertionSort t = new InsertionSort();
 	  t.countNumberOfWords();
 	  t.addSpaces();
 }
