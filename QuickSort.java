@@ -4,6 +4,22 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		 String num = "";
+		 int numDigits = String.valueOf(100).length();
+		 System.out.println(" v " +numDigits); 
+	        int x = 153423646;
+	        if(x<0){
+	            num = "-";
+	            x=-(x);
+	        }
+	        
+	        while(x>0){
+	            num = num + Integer.toString(x%10);
+	            x= x/10;
+	        }
+	        System.out.println(" v " +Integer.parseInt(num));  	
+
 		System.out.println("Sorting started");
 		int arr[] = {100,1,32,4,5,3,56,2,53,6};
 		quickSort(arr, 0, arr.length-1);
