@@ -1,20 +1,17 @@
 package gg;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
 
 public class ReverseANumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int num = 153423646;
+		int num = -1234567899;
 		int sign = +1;
 		
 		reverseNum_sol2(num);
-		//System.out.print(String.format("Reverse of Number {%s} is {%s} " ,num, (sign)*reverseNumber_sol1(num)));
-		
+		System.out.println(String.format("Reverse of Number {%s} is {%s} " ,num, (sign)*reverseNumber_sol1(num)));
+		System.out.println(reverseNum_sol3(num));
 	}
 	static long reverseNumber_sol1(int num) {
 
@@ -48,16 +45,44 @@ public class ReverseANumber {
 		return deno*num;
 	}
 	static void reverseNum_sol2(int x) {
-		Stack<Integer> s = new Stack<>();
-		
+		int n = String.valueOf(x).length();
+		int arr[] = new int[n];
+		int i = 0;
+		char sign = '+';
+		if(x == 0) {
+			System.out.print(0);
+		}else if(x<0) {
+			x = -x;
+			sign='-';
+		}
 		while(x>0) {
-			s.add(x%10);
+			arr[i++] = x%10;
 			x = x/10;
 		}
 		
-		for(int i=0;i<s.capacity()-1;i++) {
-			System.out.println();
+		if(sign=='-') {
+			System.out.print(sign);
+		}
+		
+		for(int j=0;j<i;j++) {
+			System.out.print(arr[j]);
 		}
 	}
-
-}
+		
+		static int reverseNum_sol3(int x) {
+			long rev = 0;
+	        
+	        while(x!=0){
+	            int n = x%10;
+	            x=x/10;
+	            
+	           if(rev>Integer.MAX_VALUE/10 || (rev==Integer.MAX_VALUE/10 && n>7)) {
+	            	return 0;
+	            }else if(rev<Integer.MIN_VALUE/10 || (rev==Integer.MIN_VALUE/10 && n>8)) {
+	            	return 0;
+	            }
+	            rev = rev*10+n;
+	        }
+	        return (int)rev;
+		}
+	}
