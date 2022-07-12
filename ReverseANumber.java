@@ -70,7 +70,7 @@ public class ReverseANumber {
 	}
 		
 		static int reverseNum_sol3(int x) {
-			long rev = 0;
+			int rev = 0;
 	        
 	        while(x!=0){
 	            int n = x%10;
@@ -83,6 +83,6 @@ public class ReverseANumber {
 	            }
 	            rev = rev*10+n;
 	        }
-	        return (int)rev;
+	        return rev;
 		}
 	}
