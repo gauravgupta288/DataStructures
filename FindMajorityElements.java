@@ -22,17 +22,6 @@ public class FindMajorityElements {
 				break;
 			}
 		}
-		System.out.print(hm);
-//		int max = 0;
-//		for(Integer key :hm.keySet()) {
-//			if(hm.get(key)>max) {
-//				max=hm.get(key);
-//				if(max>=arr.length/2) {
-//					System.out.print("Max is "+key);
-//					break;
-//				}
-//			}
-//		}
 	}
 
 }
