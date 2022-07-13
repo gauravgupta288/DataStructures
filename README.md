@@ -1,1 +1,2 @@
-This repository is created to practice data structure algorithm
+This repository is created to practice data structure algorithmecho # DataStructures
+# DataStructures
