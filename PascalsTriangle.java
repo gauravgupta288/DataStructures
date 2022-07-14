@@ -5,15 +5,6 @@ import java.util.*;
 public class PascalsTriangle {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		List<List<Integer>> a = new ArrayList<>();
-		
-		List<Integer> k = new ArrayList<>();
-		
-		k.add(1);
-		k.add(2);
-		a.add(k);
 		int noOfCol = 6;
 		pasTri(noOfCol);
 	}
