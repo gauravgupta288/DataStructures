@@ -14,9 +14,6 @@ public class PascalsTriangle {
 		k.add(1);
 		k.add(2);
 		a.add(k);
-		
-		
-		
 		int noOfCol = 6;
 		pasTri(noOfCol);
 	}
@@ -30,19 +27,16 @@ public class PascalsTriangle {
 				if(i==j||j==0) {
 					arr.add(1);
 				}else {
-					arr1.get(arr.get(j)-1);
-//					arr[j] = arr1[i-1][j-1] + arr1[i-1][j];
-					//System.out.print(arr[j] + " ");
+					arr.add(arr1.get(i-1).get(j-1) + arr1.get(i-1).get(j));
 				}
 			}
 			arr1.add(arr);
 		}
-		
-
 		for(List<Integer> a:arr1) {
 			for(Integer i:a) {
 				System.out.print(i + " ");
 			}
+			System.out.println();
 		}
 	}
 
