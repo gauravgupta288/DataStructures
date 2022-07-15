@@ -11,7 +11,6 @@ public class PascalsTriangle {
 	static void pasTri(int noOfCol) {
 		
 		List<List<Integer>> arr1 = new ArrayList<>();
-		
 		for(int i=0;i<noOfCol;i++) {
 			List<Integer> arr = new ArrayList<>();
 			for(int j=0;j<=i;j++) {
