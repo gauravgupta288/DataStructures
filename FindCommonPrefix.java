@@ -1,5 +1,7 @@
 package gg;
 
+import java.util.Arrays;
+
 public class FindCommonPrefix {
     public static void main(String s[]) {
         String strs[] = {"a","aa","aaba", "aa",""};
@@ -74,5 +76,20 @@ public class FindCommonPrefix {
             }
         }
         return temp;
+    }
+    static String commonPrefixSol4(String str[]){
+        Arrays.sort(str);
+
+        String first = str[0], last = str[str.length-1];
+        int i=0;
+        while(i< first.length()){
+            if(first.charAt(i) == last.charAt(i)){
+                i++;
+            }
+        }
+        if(i==0){
+            return "";
+        }
+      return first.substring(0,i);
     }
 }
