@@ -1,11 +1,12 @@
 package gg;
 
-public class ArranginCoins_leetCode_441 {
+public class ArranginCoinsLeetCode441 {
     public static void main(String s[]){
         System.out.println(arrangeCoinsSol1(1234567890));
         System.out.println(arrangeCoinsSol2(1234567890));
     }
     static int arrangeCoinsSol1(int n){
+
         int sum=0;
         for(int i=1;i<=n;i++){
             for(int j=0;j<=i;j++){
