@@ -6,6 +6,7 @@ import java.util.Set;
 
 public class LeetCode136 {
     public static void main(String s[]){
+
         int a[] = {2,2,1,1,3,4,4};
         System.out.println(findOneSol2(a));
     }
@@ -47,4 +48,6 @@ public class LeetCode136 {
         }
         return sum1-sum;
     }
+
+
 }
