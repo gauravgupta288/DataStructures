@@ -2,26 +2,27 @@ package gg;
 
 public class UglyNumberLeetCode263 {
     public static void main(String s[]){
-System.out.println(uglyNumber(15));
+System.out.println(NthUglyNumber(1690));
     }
     static boolean uglyNumber(int n){
 
-        boolean flag = false;
-        int i=2;
-        while(n>=i){
-
-            if(i==2||i==3||i==4||i==5||i==6||i==10||i==15||i==30){
-                if((n)%i==0){
-                    flag=true;
-                }
-            }else{
-                if((n)%i==0){
-                    flag=false;
-                    break;
-                }
+        for(int i=2;i<6&&n>0;i++){
+            while(n%i==0){
+                n /=i;
             }
-            i++;
         }
-        return flag;
+        return n==1;
+    }
+
+    static int NthUglyNumber(int n){
+        int count=0;
+        int i=1;
+
+        for(i=1;i<=Integer.MAX_VALUE;i++){
+            if(uglyNumber(i)) count++;
+
+            if(count==n)break;
+        }
+        return i;
     }
 }
