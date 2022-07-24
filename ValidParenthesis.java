@@ -1,10 +1,11 @@
 package gg;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class ValidParenthesis {
     public static void main(String s[]) {
-        System.out.println(validParenthesisSol1("([]"));
+        System.out.println(validParenthesisSol2("[{()}]"));
     }
 
     static boolean validParenthesis(String s) {
@@ -77,5 +78,22 @@ public class ValidParenthesis {
 
         if(al.size() != 0)return false;
         return flag;
+    }
+
+    static boolean validParenthesisSol2(String s){
+        Stack<Character> ch = new Stack<>();
+
+        for(char c:s.toCharArray()){
+            if(c=='('){
+                ch.push(')');
+            }else if(c=='{'){
+                ch.push('}');
+            } else if (c=='[') {
+                ch.push(']');
+            } else if (ch.empty() || ch.pop() != c) {
+                return false;
+            }
+        }
+        return ch.empty();
     }
 }
