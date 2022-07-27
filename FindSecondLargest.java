@@ -28,4 +28,22 @@ class FindSecondLargest {
     }
     return second;
     }
+
+	static int secondlargestSol2(int arr[]){
+		Integer f = null;
+		Integer s = null;
+
+		for(Integer n:arr){
+
+			if(n.equals(f) || n.equals(s)) continue;
+
+			if(f==null || n>f){
+				s=f;
+				f=n;
+			}else if(s==null || n>s){
+				s=n;
+			}
+		}
+		return s==null ? -1 : s;
+	}
 }
