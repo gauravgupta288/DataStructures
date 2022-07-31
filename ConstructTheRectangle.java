@@ -37,5 +37,8 @@ public class ConstructTheRectangle {
         }
         return sum;
     }
+    static void s(){
+
+    }
 
 }
