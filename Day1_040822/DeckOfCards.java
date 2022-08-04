@@ -1,3 +1,5 @@
+package gg.Day1_040822;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
