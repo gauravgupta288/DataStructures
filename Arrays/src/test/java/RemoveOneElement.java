@@ -1,40 +1,26 @@
 public class RemoveOneElement {
     public static void main(String[] args) {
-        int[] arr = {89,384,691,680,111,756};
+        int[] arr = {13, 205, 553, 527, 790, 238};
 
         System.out.println(removeone(arr));
     }
 
     static boolean removeone(int[] arr) {
-
-        int i = 1;
-        int count = 0;
-
-        while (i < arr.length) {
-            if(i== arr.length-1)return true;
-
-            if (arr[i - 1] < arr[i]) {
-                i++;
-            } else if (arr[i - 1] > arr[i]) {
-                if (count == 1) {
+        boolean flag = false;
+        int p = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (p >= arr[i]) {
+                if (flag) {
                     return false;
                 }
-                if (i == 1 ) {
-                    if(arr[i] < arr[i + 1]){
-                        i++;
-                        count++;
-                    }else{
-                        return false;
-                    }
-
-                } else if (arr[i - 1] < arr[i+1] || arr[i - 2] < arr[i]) {
-                    i++;
-                    count++;
-                } else {
-                    return false;
+                flag = true;
+                if (i == 1 || arr[i] > arr[i - 2]) {
+                    p = arr[i];
                 }
-            }else{
-                return false;
+
+            } else {
+                p = arr[i];
+
             }
         }
         return true;
