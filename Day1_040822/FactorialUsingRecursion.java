@@ -2,7 +2,7 @@ package gg.Day1_040822;
 
 public class FactorialUsingRecursion {
     public static void main(String[] args) {
-        System.out.println(factorial(3));
+        System.out.println(summation(4));
     }
 
     /**
@@ -15,5 +15,11 @@ public class FactorialUsingRecursion {
         if (num == 1) return 1;
 
         return factorial(num - 1) * num;
+    }
+
+    static int summation(int n) {
+        if (n == 0) return 0;
+
+        return summation(n - 1) + n;
     }
 }
