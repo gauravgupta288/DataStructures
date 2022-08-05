@@ -1,15 +1,10 @@
-package gg.Day1_040822;
+package gg.Day2_050822;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BuddyString {
-    public static void main(String[] args) {
-        System.out.println(buddyStringSol2("ab", "ba"));
-    }
-
-    static boolean buddyStringSol1(String s, String goal) {
+class Solution {
+    public boolean buddyStrings(String s, String goal) {
         if (s.length() != goal.length()) return false;
         int count = 0;
         int f1 = 0;
@@ -45,26 +40,4 @@ public class BuddyString {
         if(s.charAt(f1)==goal.charAt(f2) && s.charAt(f2)==goal.charAt(f1))  return true;
         else return false;
     }
-
-    static Boolean buddyStringSol2(String s, String goal) {
-        if (s.length() != goal.length()) return false;
-        ArrayList<Integer> rep = new ArrayList<>();
-        Set<Character> set = new HashSet<>();
-        if (s.equals(goal)) {
-            for (char ch : s.toCharArray()) set.add(ch);
-            return set.size() < goal.length();
-        }
-        for (int i = 0, j = s.length() - 1; i <= j; i++, j--) {
-            if (s.charAt(i) != goal.charAt(i)){
-                rep.add(i);
-            } if(s.charAt(j) != goal.charAt(j)){
-                rep.add(j);
-            }
-
-            if(rep.size()>2)return false;
-        }
-
-        return rep.size()==2 && s.charAt(rep.get(0)) == goal.charAt(rep.get(1)) && s.charAt(rep.get(1)) == goal.charAt(rep.get(0));
-    }
 }
-
