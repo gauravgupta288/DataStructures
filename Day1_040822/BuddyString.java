@@ -51,7 +51,13 @@ public class BuddyString {
         ArrayList<Integer> rep = new ArrayList<>();
         Set<Character> set = new HashSet<>();
         if (s.equals(goal)) {
-            for (char ch : s.toCharArray()) set.add(ch);
+            for (char ch : s.toCharArray()) {
+                if(set.contains(ch)){
+                    return true;
+                }else{
+                    set.add(ch);
+                }
+            }
             return set.size() < goal.length();
         }
         for (int i = 0, j = s.length() - 1; i <= j; i++, j--) {
