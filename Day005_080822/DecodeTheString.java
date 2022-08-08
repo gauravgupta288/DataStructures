@@ -9,22 +9,19 @@ public class DecodeTheString {
     }
 
     static String decodeString(String key, String message) {
-        Map<Character, String> keys = new HashMap<>();
+        Map<Character, Character> keys = new HashMap<>();
         StringBuilder sb = new StringBuilder();
 
         int i = 0;
         for (char ch : key.toCharArray()) {
             if (ch == ' ' || keys.containsKey(ch)) continue;
-            keys.put(ch, String.valueOf((char) (97 + i++)));
+            keys.put(ch, (char) (97 + i++));
                 if(i==26)break;
         }
 
+        keys.put(' ', ' ');
         for(char ch:message.toCharArray()){
-            if(ch == ' '){
-                sb.append(" ");
-            }else{
                 sb.append(keys.get(ch));
-            }
         }
         return sb.toString();
     }
