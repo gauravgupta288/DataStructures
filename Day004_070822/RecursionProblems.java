@@ -1,4 +1,4 @@
-package gg.Day4_070822;
+package gg.Day004_070822;
 
 public class RecursionProblems {
     public static void main(String[] args) {

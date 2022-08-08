@@ -1,4 +1,4 @@
-package gg.Day2_050822;
+package gg.Day002_050822;
 
 public class FibbonacciUsingRecursion {
     public static void main(String[] args) {

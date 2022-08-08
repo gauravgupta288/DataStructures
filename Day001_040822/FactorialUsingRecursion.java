@@ -1,4 +1,4 @@
-package gg.Day1_040822;
+package gg.Day001_040822;
 
 public class FactorialUsingRecursion {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package gg.Day3_060822;
+package gg.Day003_060822;
 
 import java.util.HashSet;
 import java.util.Set;
