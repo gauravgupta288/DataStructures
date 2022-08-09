@@ -11,20 +11,8 @@ public class BestPokerHand {
 
     static String pokerHand(int arr[], char[] suits) {
 
-        Set<Character> set = new HashSet<>();
         String str = "High Card";
-        boolean allfive = false;
-        set.add(suits[0]);
-        for (char ch : suits) {
-            if (set.contains(ch)) {
-                allfive = true;
-
-            } else {
-                allfive = false;
-                break;
-            }
-        }
-        if (allfive) return "Flush";
+        if(suits[0] == suits[1] && suits[1] == suits[2] && suits[2] == suits[3] &&suits[3] == suits[4] ) return "Flush";
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
