@@ -2,7 +2,7 @@ package gg.Day006_090822;
 
 public class MinimumTimeToFillCups {
     public static void main(String[] args) {
-        System.out.println(minimumTime(new int[]{5,0,0}));
+        System.out.println(minimumTime(new int[]{5,4,4}));
     }
 
     static int minimumTime(int a[]) {
@@ -12,6 +12,7 @@ public class MinimumTimeToFillCups {
         while ((a[0] != 0 && a[1] != 0) || (a[0] != 0 && a[2] != 0) || (a[2] != 0 && a[1] != 0)) {
             int max1;
             int max2;
+
 
             if (a[0] > a[1]) {
                 max1 = 0;
