@@ -7,7 +7,7 @@ public class NumberOfGoodPairs {
         System.out.print(goodPairs(new int[]{1, 2, 3, 1, 1, 3}));
     }
 
-    static int goodPairs(int[] nums) {
+    static   int goodPairs(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int pair = 0;
         for (int i : nums) {
