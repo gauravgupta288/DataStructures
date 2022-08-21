@@ -19,7 +19,7 @@ public class ListADT {
             Object newArr[] = new Object[index * 2];
 
             //Copy all elements of older array to new array
-            for(int i = 0 ;i <index;i++){
+            for (int i = 0; i < index; i++) {
                 newArr[i] = arr[i];
             }
             arr = newArr;
@@ -27,8 +27,18 @@ public class ListADT {
         arr[index++] = temp;
     }
 
+    public void removeByIndex(int idx) {
+        if (idx > index) {
+            throw new IndexOutOfBoundsException();
+        }
+        for (int i = idx; i < index; i++) {
+            arr[i] = arr[i+1];
+        }
+        index--;
+    }
+
     public void printList() {
-        for (int i = 0;i < index;i++){
+        for (int i = 0; i < index; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
@@ -45,15 +55,9 @@ class List {
         lADT.add("200");
         lADT.add("200");
         lADT.printList();
+        lADT.removeByIndex(3);
+        lADT.printList();
         System.out.println(lADT.getLen());
 
-        ListADT lADT1 = new ListADT();
-        lADT1.add(10);
-        lADT1.add(20);
-        lADT1.add(200);
-        lADT1.add(20);
-        lADT1.add(200);
-        lADT1.printList();
-        System.out.println(lADT.getLen());
     }
 }
