@@ -5,6 +5,7 @@ public class SticklerThief {
         System.out.println(maxProfit(new int[]{5,5,10,100,10,5}, 6));
     }
 
+    //TODO - in progress
     static int maxProfit(int arr[], int n) {
 
         if(n==1) return arr[0];
