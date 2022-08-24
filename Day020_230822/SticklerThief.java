@@ -20,4 +20,6 @@ public class SticklerThief {
         }
         return  Math.max(profit1, profit2);
     }
+
+
 }
