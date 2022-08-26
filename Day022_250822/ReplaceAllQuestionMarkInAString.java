@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ReplaceAllQuestionMarkInAString {
     public static void main(String[] args) {
-        System.out.println(replaceQuestionMarkChar("????"));
+        System.out.println(replaceQuestionMarkChar("cd?a?"));
     }
 
     static String replace(String s) {
@@ -35,44 +35,19 @@ public class ReplaceAllQuestionMarkInAString {
     }
 
     static String replaceQuestionMarkChar(String s) {
-        StringBuilder sb = new StringBuilder();
+        char ch[] = s.toCharArray();
 
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '?') {
-                if(s.charAt(i+1) == '?'){
-                    if ((s.charAt(i) - 1) == 'a') {
-                        sb.insert(0, 'b');
-                    } else {
-                        sb.insert(0, 'a');
-                    }
+            if (ch[i] == '?') {
+                for (int j = 0; j < 3; j++) {
+                    if (i > 0 && ch[i - 1] - 'a' == j) continue;
+                    if (i + 1 < s.length() && ch[i + 1] - 'a' == j) continue;
+                    ch[i] = (char)('a' + j);
+                    break;
                 }
-                else if (i == 0) {
-                    if ((s.charAt(i) + 1) == 'a') {
-                        sb.insert(0, 'b');
-                    } else {
-                        sb.insert(0, 'a');
-                    }
-                }else if(i==s.length()-1){
-                    if ((s.charAt(i) - 1) == 'a') {
-                        sb.insert(i, 'b');
-                    } else {
-                        sb.insert(i, 'a');
-                    }
-                }else {
-                    if ((s.charAt(i) - 1) != 'a' || (s.charAt(i) + 1) != 'a'  ) {
-                        sb.insert(i, 'a');
-                    }else if ((s.charAt(i) - 1) != 'b' || (s.charAt(i) + 1) != 'b'  ) {
-                        sb.insert(i, 'b');
-                    }else if ((s.charAt(i) - 1) != 'c' || (s.charAt(i) + 1) != 'c'  ) {
-                        sb.insert(i, 'c');
-                    }
-                }
-
-            }  else {
-                sb.append(s.charAt(i));
             }
         }
 
-        return sb.toString();
+        return String.valueOf(ch);
     }
 }
