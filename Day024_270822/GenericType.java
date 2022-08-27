@@ -11,9 +11,6 @@ public class GenericType<T> {
     public static void main(String[] args) {
         String s = "Bunny";
         int age = 1;
-
-        int a = Math.abs(-1);
-
         GenericType gt = new GenericType();
         gt.add(s, " Ryan");
         gt.add(age, 10);
