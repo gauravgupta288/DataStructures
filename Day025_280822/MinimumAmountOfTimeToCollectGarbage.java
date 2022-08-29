@@ -18,13 +18,13 @@ public class MinimumAmountOfTimeToCollectGarbage {
             for (int j = 0; j < ch.length; j++) {
                 if(ch[j] == 'G'){
                     time += add(gStart, i-1, travel);
-                    gStart = i-1;
+                    gStart = i;
                 }else if(ch[j] == 'P'){
                     time += add(pStart, i-1, travel);
-                    pStart = i-1;
+                    pStart = i;
                 }else{
                     time += add(mStart, i-1, travel);
-                    mStart = i-1;
+                    mStart = i;
                 }
             }
         }
