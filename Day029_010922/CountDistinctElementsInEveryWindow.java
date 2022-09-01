@@ -16,9 +16,7 @@ public class CountDistinctElementsInEveryWindow {
         for (i = 0; i < k; i++) {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
-
         ans.add(map.size());
-
         for (; i < n; i++) {
             if (map.get(arr[i - k ]) == 1) {
                 map.remove(arr[i - k]);
@@ -28,7 +26,6 @@ public class CountDistinctElementsInEveryWindow {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
             ans.add(map.size());
         }
-
         return ans;
     }
 }
