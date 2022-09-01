@@ -6,12 +6,12 @@ import java.util.LinkedHashMap;
 
 public class CountDistinctElementsInEveryWindow {
     public static void main(String[] args) {
-        distinctElement(new int[]{4,1,1}, 3, 2);
+        distinctElement(new int[]{1, 2, 1, 3, 4, 2, 3}, 7, 4);
     }
 
     static ArrayList<Integer> distinctElement(int arr[], int n, int k) {
         ArrayList<Integer> ans = new ArrayList<>();
-        HashMap<Integer, Integer> map = new LinkedHashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         int i;
         for (i = 0; i < k; i++) {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
