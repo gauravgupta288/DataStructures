@@ -1,4 +1,4 @@
-package gg.Month02_Sep.Day029_010922.Day030_020922;
+package gg.Month02_Sep.Day030_020922;
 
 class ListNode {
     int val;

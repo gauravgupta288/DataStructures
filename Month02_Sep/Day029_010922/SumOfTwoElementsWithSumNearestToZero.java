@@ -1,4 +1,4 @@
-package gg.Month02_Sep.Day029_010922.Day029_010922;
+package gg.Month02_Sep.Day029_010922;
 
 import java.util.Arrays;
 

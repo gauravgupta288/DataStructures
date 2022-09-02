@@ -10,7 +10,7 @@ public class TreeMapExample {
     static void treeMap() {
 
         TreeMap<String, String> treeMap = new TreeMap<>();
-        treeMap.put("Month02_Sep/Day029_010922/Month02_Sep/1", "bunny");
+        treeMap.put("gg/Month02_Sep/Month02_Sep/1", "bunny");
         treeMap.put("3", "Ryan");
         treeMap.put("", "Avayukt");
 
