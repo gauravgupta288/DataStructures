@@ -1,10 +1,23 @@
 package gg.Month02_Sep.Day030_020922;
 class LinkedList{
+    LinkedList next;
+    int val;
+    static LinkedList head;
+    public static void insert(int data){
+        LinkedList n = new LinkedList();
+        n.val = data;
+        n.next = null;
 
+        if(head.next != null){
+
+        }
+    }
 }
+
 public class PalinDromeLinkedList {
     public static void main(String[] args) {
         //Use slow and fast pointer to reach to middle and last;
+        ListNode head = new ListNode();
         ListNode slow = head;
         ListNode temp = head;
         ListNode fast = head;
@@ -15,16 +28,17 @@ public class PalinDromeLinkedList {
         }
         slow = reverse(slow);
         fast = head;
+
         while(slow != null){
             if(fast.val != slow.val){
-                return false;
+                System.out.println(false);
             }
             slow = slow.next;
             fast = fast.next;
         }
-        return true;
+        System.out.println(true);
     }
-    ListNode reverse(ListNode head){
+    static ListNode reverse(ListNode head){
         ListNode newHead = null;
         while(head != null){
             ListNode next= head.next;
