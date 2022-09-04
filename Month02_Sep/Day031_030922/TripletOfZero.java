@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class TripletOfZero {
     public static void main(String[] args) {
-        triplet(new int[]{-1,0,1,2,-1,-4});
+        triplet(new int[]{-1,0,1,0});
     }
 
     static List<List<Integer>> triplet(int nums[]) {
@@ -19,13 +19,38 @@ public class TripletOfZero {
             for (int j = i + 1; j < nums.length; j++) {
                 int sum = nums[i] + nums[j];
                 if (set.contains(-sum)) {
-                    innerList.add(nums[i]);
-                    innerList.add(nums[j]);
-                    innerList.add(-sum);
+                    if (nums[i] < nums[j] && nums[i] < -sum) {
+                        innerList.add(nums[i]);
+                        if (nums[j] < -sum) {
+                            innerList.add(nums[j]);
+                            innerList.add(-sum);
+                        } else {
+                            innerList.add(-sum);
+                            innerList.add(nums[j]);
+                        }
+                    } else if (nums[j] < nums[i] && nums[j] < -sum) {
+                        innerList.add(nums[j]);
+                        if (nums[i] < -sum) {
+                            innerList.add(nums[i]);
+                            innerList.add(-sum);
+                        } else {
+                            innerList.add(-sum);
+                            innerList.add(nums[i]);
+                        }
+                    } else {
+                        innerList.add(-sum);
+                        if (nums[i] < nums[j]) {
+                            innerList.add(nums[i]);
+                            innerList.add(nums[j]);
+                        } else {
+                            innerList.add(nums[j]);
+                            innerList.add(nums[i]);
+                        }
+                    }
                 }
             }
             set.add(nums[i]);
-            if(!innerList.isEmpty() && !list.contains(innerList)){
+            if (!innerList.isEmpty() && !list.contains(innerList)) {
                 list.add(innerList);
             }
         }
