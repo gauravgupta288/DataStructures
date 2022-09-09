@@ -5,6 +5,7 @@ public class SingleElementInASortedArray {
         System.out.println(singleElement(new int[]{1, 1, 2, 3, 3, 4, 4, 8, 8}));
     }
 
+    //This solution will have time complexity with O(N) and space complexity is O(1)
     static int singleElement(int nums[]) {
         if(nums.length==1) return nums[0];
         for (int i = 1; i < nums.length; i++) {
