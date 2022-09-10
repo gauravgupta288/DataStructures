@@ -2,7 +2,7 @@ package gg.Month02_Sep.Day037_090922;
 
 public class BitManupulation {
     public static void main(String[] args) {
-
+        System.out.println(numberofStepToBecomeZero(4));
     }
 
     static int numberofStepToBecomeZero(int num){
