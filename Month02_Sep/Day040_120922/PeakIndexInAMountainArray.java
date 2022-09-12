@@ -16,7 +16,7 @@ public class PeakIndexInAMountainArray {
                 }else if(arr[mid] > arr[mid - 1]){
                     start = mid + 1;
                 }else{
-                    end = mid - 1;
+                    end = mid ;
                 }
             }
 
