@@ -2,7 +2,7 @@ package gg.Month02_Sep.Day045_170922;
 
 public class ReverseBits {
     public static void main(String[] args) {
-        System.out.println(reverse(00000010100101000001111010011100));
+        System.out.println(reverse(2));
     }
 
     static int reverse(int n){
