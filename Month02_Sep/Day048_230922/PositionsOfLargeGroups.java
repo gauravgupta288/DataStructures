@@ -22,6 +22,7 @@ public class PositionsOfLargeGroups {
                 j++;
                 count++;
             }
+            i = i+count;
             end = j+i;
             if (count >= 3) {
                 list.add(List.of(start, end));
