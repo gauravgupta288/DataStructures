@@ -15,6 +15,7 @@ public class TwoIndependentEvents {
         int num6;
         int num8;
         num1 = event1[0].split(":");
+
         num4 = Integer.parseInt(num1[0]) * 100 + Integer.parseInt(num1[1]);
 
         num2 = event1[1].split(":");
