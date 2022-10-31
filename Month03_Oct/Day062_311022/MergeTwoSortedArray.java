@@ -1,4 +1,4 @@
-package gg.Month03_Oct.Day062_311022;
+package Month03_Oct.Day062_311022;
 
 public class MergeTwoSortedArray {
     public static void main(String[] args) {

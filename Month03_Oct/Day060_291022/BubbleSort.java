@@ -1,4 +1,4 @@
-package gg.Month03_Oct.Day060_291022;
+package Month03_Oct.Day060_291022;
 
 public class BubbleSort {
     public static void bubbleSort(int[] arr, int n) {

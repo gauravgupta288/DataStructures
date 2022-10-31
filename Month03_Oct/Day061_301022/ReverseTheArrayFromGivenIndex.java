@@ -1,4 +1,4 @@
-package gg.Month03_Oct.Day061_301022;
+package Month03_Oct.Day061_301022;
 
 import java.util.ArrayList;
 

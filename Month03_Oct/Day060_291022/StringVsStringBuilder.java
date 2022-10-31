@@ -1,4 +1,4 @@
-package gg.Month03_Oct.Day060_291022;
+package Month03_Oct.Day060_291022;
 
 public class StringVsStringBuilder {
     public static void main(String[] args) {
