@@ -9,7 +9,6 @@ public class SubarrayWithGivenSum {
 
     static ArrayList<Integer> subarray(int[] arr, int n, int s) {
         int sum = 0;
-        int k = 0;
         ArrayList<Integer> ans = new ArrayList<>();
 
         for (int i = 0; i < n; i++) {
