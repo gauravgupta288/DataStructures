@@ -21,6 +21,25 @@ class Node{
 
     }
 
+    Node deleteAtPosition(Node node, int pos){
+        Node temp = node;
+
+        int count = 1;
+
+        while(count != pos && temp!=null){
+            temp = temp.next;
+            count++;
+        }
+        if(temp.next.next != null){
+            temp.next = temp.next.next;
+        }else{
+            temp.next = null;
+        }
+
+        return node;
+
+    }
+
     void printLinkedList(Node node){
         Node temp = node;
 
@@ -42,6 +61,8 @@ public class LinkedList {
 
         node.printLinkedList(node);
 
+        node = node.deleteAtPosition(node, 0);
+        node.printLinkedList(node);
 
 
     }
