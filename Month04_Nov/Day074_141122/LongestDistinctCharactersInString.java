@@ -11,7 +11,6 @@ public class LongestDistinctCharactersInString {
         int end = 0;
 
         for (int i = 0; i < S.length(); i++) {
-            S.
         }
 
 
