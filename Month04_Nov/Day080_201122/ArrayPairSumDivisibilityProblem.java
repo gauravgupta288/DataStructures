@@ -1,6 +1,7 @@
 package Month04_Nov.Day080_201122;
 
 public class ArrayPairSumDivisibilityProblem {
+    private String name;
     public static void main(String[] args) {
         System.out.println(arraySum(new int[]{14, 10, 1, 1}, 3));
     }
@@ -12,6 +13,7 @@ public class ArrayPairSumDivisibilityProblem {
         }
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
+                if((nums[j] != -1 && nums[i] != -1) && (nums[i] + nums[j]) % k ==0){
                     nums[i] = -1;
                     nums[j] = -1;
                     break;
