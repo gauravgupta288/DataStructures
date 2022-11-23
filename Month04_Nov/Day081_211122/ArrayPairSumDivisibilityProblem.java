@@ -1,6 +1,9 @@
 package Month04_Nov.Day081_211122;
 
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 public class ArrayPairSumDivisibilityProblem {
 
@@ -9,6 +12,8 @@ public class ArrayPairSumDivisibilityProblem {
     }
 
     static boolean arrayPair(int[] nums, int k) {
+        Queue<Integer> queue = new LinkedList<>();
+
         if (nums.length % 2 != 0) return false;
         HashMap<Integer, Integer> map = new HashMap<>();
 
