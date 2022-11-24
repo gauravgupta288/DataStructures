@@ -1,15 +1,15 @@
 package Month04_Nov.Day082_241122;
 
-public class Stack {
+public class Stack<T> {
     int size = 10;
     int pos = 0;
-    int[] arr;
+    Object[] arr;
 
     public Stack() {
-        arr = new int[size];
+        arr = new Object[size];
     }
 
-    public int push(int item) {
+    public T push(T item) {
         if (pos == size) {
             throw new ArrayIndexOutOfBoundsException("Array is full");
         } else {
@@ -18,9 +18,8 @@ public class Stack {
         return item;
     }
 
-    public int pop() {
-        System.out.println(pos);
-        return arr[pos--];
+    public T pop() {
+        return (T) arr[--pos];
     }
 
     public void print() {
