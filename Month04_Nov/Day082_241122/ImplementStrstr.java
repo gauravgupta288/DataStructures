@@ -11,8 +11,6 @@ public class ImplementStrstr {
 
         for (int i = 0; i < s.length(); i++) {
             int j = i;
-
-
             if (s.charAt(j) == x.charAt(len)) {
                 while (j < s.length() && len < x.length() && s.charAt(j) == x.charAt(len)) {
                     len++;
