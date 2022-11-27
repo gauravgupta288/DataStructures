@@ -6,7 +6,6 @@ public class PivotInteger {
     }
 
     public static int pivotInteger(int n) {
-
         if(n==1){
             return 1;
         }
@@ -21,13 +20,11 @@ public class PivotInteger {
             }else if(startSum == endSum ){
                 if(i+1 == n-1){
                     return i+1;
-
                 }else{
                     startSum += ++i;
                     endSum += --n;
                 }
             }
-
         }
         return -1;
     }
