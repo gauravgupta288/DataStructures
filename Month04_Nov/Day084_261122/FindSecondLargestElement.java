@@ -2,7 +2,7 @@ package Month04_Nov.Day084_261122;
 
 public class FindSecondLargestElement {
     public static void main(String[] args) {
-        System.out.println(secondLargest(new int[]{10, 2, 3, 20, 10}));
+        System.out.println(secondLargest(new int[]{10, 2, 3, 20, 90}));
     }
 
     static int secondLargest(int arr[]) {
