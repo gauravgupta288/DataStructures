@@ -12,18 +12,26 @@ public class BrokenLetters {
         boolean flag = false;
 
         for (String s : word) {
-            for(char ch : brokenLetters.toCharArray()){
-                if(s.indexOf(ch) != -1){
+            for (char ch : brokenLetters.toCharArray()) {
+                if (s.indexOf(ch) != -1) {
                     flag = true;
                     break;
                 }
             }
-            if(!flag){
+            if (!flag) {
                 count++;
 
             }
             flag = false;
         }
+
+        return count;
+    }
+
+    public int brokenWord(String text, String brokenLetters) {
+        int count = 0;
+
+
 
         return count;
     }
