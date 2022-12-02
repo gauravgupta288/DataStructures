@@ -1,4 +1,4 @@
-package Month05_Dec.Day089_011222.Day090_021222;
+package Month05_Dec.Day090_021222;
 
 public class SoryByParity {
 
