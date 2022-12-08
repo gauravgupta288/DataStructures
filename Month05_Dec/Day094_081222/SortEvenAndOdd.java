@@ -10,7 +10,6 @@ public class SortEvenAndOdd {
         int oddIndexes[] = new int[101];
         int evenIndexes[] = new int[101];
 
-
         for(int i =1; i < nums.length;i = i+2){
             oddIndexes[nums[i]]++;
         }
