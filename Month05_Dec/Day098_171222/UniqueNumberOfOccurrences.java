@@ -6,7 +6,6 @@ import java.util.Set;
 
 public class UniqueNumberOfOccurrences {
     public static void main(String[] args) {
-
     }
 
     static boolean uniqureOccurences(int arr[]){
