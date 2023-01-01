@@ -5,8 +5,6 @@ public class MaxConsecutiveOnes {
 
     }
 
-    static int maxOnes(int[] nums, int k) {
-
         for (int i = 0; i < nums.length; i++) {
 
             if(nums[i] == 0){
