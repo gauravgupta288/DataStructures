@@ -8,11 +8,18 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Arrays" />
         <module name="Strings" />
+        <module name="DataStructures" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Arrays" target="10" />
+      <module name="DataStructures" target="17" />
       <module name="Strings" target="10" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DataStructures" options="-parameters" />
+    </option>
   </component>
 </project>
