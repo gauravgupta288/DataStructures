@@ -13,7 +13,7 @@ public class test {
         ObjectNode node2 = mapper.createObjectNode();
 
         node.put("name", "xyz");
-        node.put("role", 1);
+        node.put("role", 2);
 
         node2.put("name", "xyz");
         node2.put("role", 2);
