@@ -26,9 +26,32 @@ public class test {
         }else{
             System.out.println("not equals");
         }
+
+        Test obj1 = new Test1();
+        Test2 obj2 = new Test1();
+
+        System.out.println(obj1);
+        System.out.println(obj2);
     }
     static {
         System.out.println("static");
     }
 
+
+
 }
+
+interface Test{
+    public void test();
+}
+interface Test2{
+
+    public void test();
+}
+ class Test1 implements Test, Test2{
+     @Override
+     public void test() {
+         System.out.println("test in class");
+     }
+
+ }
