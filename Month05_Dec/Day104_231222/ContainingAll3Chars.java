@@ -1,6 +1,8 @@
 package Month05_Dec.Day104_231222;
 
-public class ContainingAll3Chars {
+import Month05_Dec.Day105_241222.Abs;
+
+public class ContainingAll3Chars extends Abs {
     public static void main(String[] args) {
         System.out.println(numberOfSubstrings("aaacb"));
     }
@@ -15,5 +17,10 @@ public class ContainingAll3Chars {
         }
 
         return res;
+    }
+
+    @Override
+    public void test() {
+
     }
 }
