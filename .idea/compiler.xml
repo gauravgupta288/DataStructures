@@ -19,7 +19,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="DataStructures" options="-parameters" />
+      <module name="DataStructures" options="" />
     </option>
   </component>
 </project>
