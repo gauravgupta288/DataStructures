@@ -2,6 +2,7 @@ package Month06_Jan.Day109_190123;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Stack;
 
 public class WordsFormed {
     public static void main(String[] args) {
@@ -17,6 +18,9 @@ public class WordsFormed {
         }
 
         for(String s : words){
+            Stack<Character> stack = new Stack<>();
+
+            stack.eq
             Map<Character, Integer> imap = new HashMap<>();
             boolean flag = false;
             for(char ch : s.toCharArray()){
