@@ -20,7 +20,6 @@ public class WordsFormed {
         for(String s : words){
             Stack<Character> stack = new Stack<>();
 
-            stack.eq
             Map<Character, Integer> imap = new HashMap<>();
             boolean flag = false;
             for(char ch : s.toCharArray()){
