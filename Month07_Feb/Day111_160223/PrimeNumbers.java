@@ -12,7 +12,6 @@ public class PrimeNumbers {
                 count++;
             }
         }
-
         return count;
     }
 
