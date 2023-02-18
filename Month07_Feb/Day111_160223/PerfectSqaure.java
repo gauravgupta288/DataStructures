@@ -2,7 +2,7 @@ package Month07_Feb.Day111_160223;
 
 public class PerfectSqaure {
     public static void main(String[] args) {
-        System.out.println(perfectSquare(16));
+        System.out.println(perfectSquare(20000000));
     }
 
     public static boolean perfectSquare(int num) {
