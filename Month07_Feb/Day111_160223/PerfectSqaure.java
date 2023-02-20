@@ -4,7 +4,6 @@ public class PerfectSqaure {
     public static void main(String[] args) {
         System.out.println(perfectSquare(120));
     }
-
     public static boolean perfectSquare(int num) {
         int start = 0;
         int end = num;
