@@ -6,7 +6,6 @@ public class PerfectSqaure {
     }
 
     public static boolean perfectSquare(int num) {
-
         int start = 0;
         int end = num;
         while (start < end) {
