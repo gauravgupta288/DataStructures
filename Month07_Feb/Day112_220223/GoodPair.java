@@ -5,7 +5,11 @@ import java.util.Set;
 
 public class GoodPair {
     public static void main(String[] args) {
+        int[]arr = {10,20,30,40,50};
 
+        fun(arr);
+
+        System.out.println(arr[3]);
     }
 
     public int solve(int[] A, int B) {
@@ -21,5 +25,13 @@ public class GoodPair {
         }
 
         return 0;
+    }
+
+    static void fun(int[]arr) {
+
+        arr[3] = 98;
+
+        return;
+
     }
 }
