@@ -6,13 +6,11 @@ public class EvenNumbersInARange {
     }
 
     public static int[] solve(int[] A, int[][] B){
-
         int ans[] = new int[B.length];
 
         for(int i = 0; i < A.length; i++){
             A[i] = A[i] % 2 == 0 ? 1 : 0 ;
         }
-
         for(int i = 1; i < A.length; i++){
             A[i] += A[i - 1];
         }
