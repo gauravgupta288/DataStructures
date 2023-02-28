@@ -6,18 +6,19 @@ public class AmazingSubarray {
     }
 
     static int solve(String A){
-        long count = 0;
+        int count = 0;
+        String vowels = "aeiouAEIOU";
+        int mod = 10003;
 
         for(int i = 0; i < A.length(); i++){
             char ch = A.charAt(i);
-            if(ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'){
-                count += A.length() - i;
+
+            if(vowels.indexOf(ch) != -1){
+                count  = (count%mod + A.length() - i) % mod;
             }
-            if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
-                count += A.length() - i;
-            }
+
         }
 
-        return (int)count % 10003;
+        return count;
     }
 }
