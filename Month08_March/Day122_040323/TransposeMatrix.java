@@ -8,6 +8,7 @@ public class TransposeMatrix {
     static int[][] solve(int[][] A){
         int m = A[0].length;
         int n = A.length;
+        int ans[][] = new int[m][n];
         int max = Math.max(A.length, A[0].length);
 
         int result[][] = new int[max][max];
@@ -30,10 +31,10 @@ public class TransposeMatrix {
 
         for(int i = 0; i < m; i++){
             for(int j = 0; j < n; j++){
-                A[i][j] = result[i][j];
+                ans[i][j] = result[i][j];
             }
         }
 
-        return A;
+        return ans;
     }
 }
