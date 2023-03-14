@@ -2,7 +2,7 @@ package Month08_March.Day131_130323;
 
 public class SpecialIndex {
     public static void main(String[] args) {
-        System.out.println(solve(new int[]{1,1,1}));
+        System.out.println(solve(new int[]{2,1,6,4}));
     }
 
     static int solve(int A[]){
