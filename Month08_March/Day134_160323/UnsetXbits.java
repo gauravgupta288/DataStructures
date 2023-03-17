@@ -8,6 +8,7 @@ public class UnsetXbits {
     static long solve(long A, long B){
         long ans = 0;
 
+        System.out.println(11 & 1);
         for(int i = 0; i < B; i++){
             long temp = A & (1 << i);
             if( temp == 1 << i){
