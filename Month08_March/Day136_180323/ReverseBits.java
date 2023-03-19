@@ -3,6 +3,10 @@ package Month08_March.Day136_180323;
 public class ReverseBits {
     public static void main(String[] args) {
         System.out.println(reverse(10));
+
+        for(int i = 0; i < 5; i++){
+            System.out.println(1 << i);
+        }
     }
 
     static long reverse(int A) {
