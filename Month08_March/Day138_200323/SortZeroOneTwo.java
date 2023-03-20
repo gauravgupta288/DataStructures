@@ -7,18 +7,18 @@ public class SortZeroOneTwo {
 
     static int[] solve(int A[]){
         int s = 0;
-        int e = A.length;
+        int e = A.length - 1;
         int p = 0;
 
-        while (s < e){
+        while (p <= e){
             if(A[p] == 0){
                 int temp = A[p];
-                A[p] = A[s];
+                A[p++] = A[s];
                 A[s++] = temp;
             }else if(A[p] == 2){
                 int temp = A[p];
                 A[p] = A[e];
-                A[e++] = temp;
+                A[e--] = temp;
             }else{
                 p++;
             }
