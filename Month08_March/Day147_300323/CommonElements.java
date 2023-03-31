@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class CommonElements {
     public static void main(String[] args) {
-        System.out.println(solve(new int[]{2, 1, 4, 10}, new int[]{3, 6, 2, 10, 10}));
+        System.out.println(solve(new int[]{1,2,2,1}, new int[]{2,2}));
     }
 
     static int[] solve(int[] A, int[] B){
@@ -25,9 +25,7 @@ public class CommonElements {
             if(set2.containsKey(i)){
                 int n = Math.min(set1.get(i), set2.get(i));
 
-                for(int j = 0; j < n; j++){
                     arr.add(i);
-                }
             }
 
         }
