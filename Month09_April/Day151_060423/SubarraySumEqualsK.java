@@ -4,10 +4,18 @@ import java.util.HashMap;
 
 public class SubarraySumEqualsK {
     public static void main(String[] args) {
-        System.out.println(solve(new int[]{1,0,1}, 1));
+
+
+        String str = "gaurav";
+        String str1 = "gaurav";
+
+        String str2 = new String("gaurav");
+
+        System.out.println(str == str2);
+        System.out.println(str.equals(str2));
     }
 
-    static int solve(int A[], int B){
+     int solve(int A[], int B){
         HashMap<Long, Integer> map = new HashMap<>();
         int count = 0;
 
@@ -30,5 +38,12 @@ public class SubarraySumEqualsK {
         }
 
         return count;
+    }
+
+    static double fun(int n){
+        if (n % 2 ==0){
+            return 0;
+        }
+        return fun(n - 1) + fun((int) Math.floor(n/2));
     }
 }
