@@ -1,7 +1,9 @@
+package Month09_April.Day160_170423;
+
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+public class StringProblem {
     public static void main(String[] args) {
         String str = "I am one of the consultants abc";
 
