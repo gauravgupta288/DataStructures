@@ -4,7 +4,6 @@ public class SubarraysWithBitwiseOR1 {
     public static void main(String[] args) {
         System.out.println(solve(2, new int[]{1,0}));
     }
-
     static long solve(int A, int B[]){
         int last=0;
         long ans=0;
