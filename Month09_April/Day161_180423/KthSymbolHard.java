@@ -9,7 +9,6 @@ public class KthSymbolHard {
         if(A == 1){
             return 0;
         }
-
         int parent = solve(A- 1, B/2);
 
         int ans[] = new int[2];
