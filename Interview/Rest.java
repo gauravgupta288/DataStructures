@@ -3,7 +3,6 @@ package Interview;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
@@ -99,8 +98,7 @@ public class Rest {
                 .extract()
                 .response();
 
-        JsonPath jsonPath =  response.jsonPath();
-        List<String> list = jsonPath.getList("data.id");
+        List<String> list = response.jsonPath().getList("data.id");
 
         System.out.println(list);
     }
