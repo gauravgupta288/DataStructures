@@ -3,7 +3,13 @@ package Interview;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.builder.ResponseSpecBuilder;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+import io.restassured.specification.ResponseSpecification;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
@@ -18,11 +24,27 @@ public class Rest {
     public static void main(String[] args) {
         getRequest();
     }
+    static RequestSpecification requestSpecification;
+    static ResponseSpecification responseSpecification;
+
+    @BeforeClass
+    public void setup(){
+        RequestSpecBuilder builder = new RequestSpecBuilder();
+        builder.setBaseUri("https://reqres.in/api/");
+        builder.setContentType(ContentType.JSON);
+        requestSpecification = builder.build();
+
+        ResponseSpecBuilder resBuilder = new ResponseSpecBuilder();
+        resBuilder.expectContentType("application/json");
+        resBuilder.expectStatusCode(200);
+        responseSpecification = resBuilder.build();
+    }
 
     @Test
     static void getRequest(){
-        baseURI = "https://reqres.in/api/";
+        baseURI = "";
         given()
+                .spec(requestSpecification)
                 .header("authorization", "")
                 .contentType("Application/json")
                 .when()
@@ -30,6 +52,7 @@ public class Rest {
                 .then()
                 .statusCode(200)
                 .assertThat()
+                .spec(responseSpecification)
                 .body("page", equalTo(2))
                 .header("Content-Type", "application/json; charset=utf-8")
                 .statusLine("HTTP/1.1 200 OK")
