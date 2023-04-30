@@ -11,7 +11,6 @@ public class RainWaterTrapped {
         int ans = 0;
 
         lmax[0] = A[0];
-
         for(int i = 1; i < A.length; i++){
             lmax[i] = Math.max(lmax[i -1 ], A[i]);
         }
