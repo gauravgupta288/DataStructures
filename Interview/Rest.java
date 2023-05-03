@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
@@ -46,7 +47,7 @@ public class Rest {
         given()
                 .spec(requestSpecification)
                 .header("authorization", "")
-                .contentType("Application/json")
+                .contentType(ContentType.JSON)
                 .when()
                 .get("users?page=2")
                 .then()
@@ -122,6 +123,8 @@ public class Rest {
                 .response();
 
         List<String> list = response.jsonPath().getList("data.id");
+
+        List<Map<String, String>> list1 = response.jsonPath().getList("data");
 
         System.out.println(list);
     }
