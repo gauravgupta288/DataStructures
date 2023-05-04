@@ -4,7 +4,7 @@ public class VeryLargePower {
     public static void main(String[] args) {
         int B = fact(27);
 
-        long ans = solve((long)2, B, 1000000007);
+        long ans = solve(2, B, 1000000007);
         System.out.println(ans);
     }
 
@@ -13,10 +13,11 @@ public class VeryLargePower {
             return 1;
         }
         int num = B & 1;
+
         if( num == 0){
             return solve((A * A) % m, B/2, m) % m;
         }else{
-            return (A * (solve((A * A) % m, B/2, m) % m)) % m;
+            return (A * (solve((A * A) % m, B/2, m) % m) % m) % m;
         }
     }
 
