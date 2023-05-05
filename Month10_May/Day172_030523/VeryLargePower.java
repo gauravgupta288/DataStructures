@@ -2,10 +2,9 @@ package Month10_May.Day172_030523;
 
 public class VeryLargePower {
     public static void main(String[] args) {
-        int B = fact(27);
-
-        long ans = solve(2, B, 1000000007);
-        System.out.println(ans);
+        int B = fact(6);
+        System.out.println(B);
+        System.out.println(solve(2, B, 1000000007));
     }
 
     static long solve(long A, int B, int m) {
@@ -22,9 +21,14 @@ public class VeryLargePower {
     }
 
     static int fact(int B){
-        if(B == 1){
-            return 1;
+
+        int f = 1;
+        int i = 1;
+        int mod = 1000000007;
+        while(i <= B){
+            f = (f * i) % mod;
+            i++;
         }
-        return (B * fact(B - 1)) % 1000000007;
+        return f;
     }
 }
