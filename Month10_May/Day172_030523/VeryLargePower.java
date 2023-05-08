@@ -2,12 +2,12 @@ package Month10_May.Day172_030523;
 
 public class VeryLargePower {
     public static void main(String[] args) {
-        int B = fact(6);
+        int B = fact(27);
         System.out.println(B);
         System.out.println(solve(2, B, 1000000007));
     }
 
-    static long solve(long A, int B, int m) {
+    static long solve(int A, int B, int m) {
         if(B == 0){
             return 1;
         }
