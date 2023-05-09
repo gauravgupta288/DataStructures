@@ -2,10 +2,12 @@ package Month10_May.Day176_080523;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class DivisorGame {
     public static void main(String[] args) {
-        System.out.println(solve(81991, 2549, 7));
+        printTillN();
+        System.out.println(solve(540691213, 38, 9741));
     }
 
     static int solve(int A, int B, int C){
@@ -15,8 +17,8 @@ public class DivisorGame {
 
         int count = 0;
 
-        for(int i = 1; i * B <= A; i++){
-            list.add(i * min);
+        for(long i = 1; i * max <= A; i++){
+            list.add((int)i * max);
         }
 
         for(int i = 0; i < list.size(); i++){
@@ -26,5 +28,18 @@ public class DivisorGame {
             }
         }
         return count;
+    }
+
+    static void printTillN(){
+
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            String s = sc.nextLine();
+
+            if(s.equals("n") || s.equals("no") || s.equals("No")){
+                break;
+            }
+
+        }
     }
 }
