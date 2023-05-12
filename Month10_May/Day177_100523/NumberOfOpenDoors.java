@@ -2,23 +2,27 @@ package Month10_May.Day177_100523;
 
 public class NumberOfOpenDoors {
     public static void main(String[] args) {
-        System.out.println(solve(8324616));
+        System.out.println(solve(62360));
     }
 
     static int solve(int A){
-        int ans[] = new int[A + 1];
-        for (int i = 1; i <= A/2; i++) {
-            for (int j = i; j <= A; j += i) {
-                if(ans[j] == 0){
-                    ans[j] = 1;
-                }else{
-                    ans[j] = 0;
-                }
+        int ans = 0;
+        for(int i = 1;i <= A; i++){
+            int num = factors(i) & 1;
+            if(num == 1){
+                ans++;
             }
         }
+        return ans;
+    }
+
+    static int factors(int A){
         int count = 0;
-        for(int i = 1; i < ans.length; i++){
-            if(ans[i] == 1){
+        for(int i = 1; i * i <= A; i++ ){
+            if(A % i == 0){
+                if(i != A/i){
+                    count++;
+                }
                 count++;
             }
         }
