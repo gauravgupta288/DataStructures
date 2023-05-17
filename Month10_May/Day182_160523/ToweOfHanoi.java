@@ -9,7 +9,6 @@ public class ToweOfHanoi {
     }
 
     static int[][] towerOfHanoi(int A) {
-
         List<int[]> list = new ArrayList<>();
         tower(A, 1, 3, 2, list);
 
