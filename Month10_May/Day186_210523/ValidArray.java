@@ -10,7 +10,6 @@ public class ValidArray {
 
     static List<List<Integer>> combine(int A, int B) {
         List<List<Integer>> ans = new ArrayList<>();
-
         solve(1, A, B, new ArrayList<>(), ans);
         return ans;
     }
@@ -18,6 +17,7 @@ public class ValidArray {
     static void solve(int i, int A, int B, List<Integer> temp, List<List<Integer>> ans) {
         if (B == 0) {
             ans.add(temp);
+
             return;
         }
         solve(i + 1, A, B, temp, ans);
