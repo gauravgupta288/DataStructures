@@ -4,7 +4,6 @@ public class FindRange {
     public static void main(String[] args) {
         System.out.println(solve(new int[]{1}, 1));
     }
-
     static int[] solve(int A[], int B){
         return new int[]{findFirstOccurence(A, B), findLastOccurence(A, B)};
     }
