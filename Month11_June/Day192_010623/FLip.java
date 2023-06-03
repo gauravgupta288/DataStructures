@@ -2,10 +2,10 @@ package Month11_June.Day192_010623;
 
 public class FLip {
     public static void main(String[] args) {
-
+solve("");
     }
 
-    int[] solve(String A){
+    static  int[] solve(String A){
         int index = 0;
         int l = 0;
         int r = -1;
