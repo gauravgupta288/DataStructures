@@ -4,7 +4,6 @@ public class SubMatrixSumQueries {
     public static void main(String[] args) {
         solve(new int[][]{{1, 2, 3},{4, 5, 6}, {7, 8, 9}}, new int[]{1,2}, new int[]{1,2}, new int[]{2,3},new int[]{2,3});
     }
-
     static int[] solve(int[][] A, int[] B, int[] C, int[] D, int[] E){
         int mod = 1000000007;
         int n = A.length;
