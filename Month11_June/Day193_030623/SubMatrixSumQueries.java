@@ -1,5 +1,4 @@
 package Month11_June.Day193_030623;
-
 public class SubMatrixSumQueries {
     public static void main(String[] args) {
         solve(new int[][]{{1, 2, 3},{4, 5, 6}, {7, 8, 9}}, new int[]{1,2}, new int[]{1,2}, new int[]{2,3},new int[]{2,3});
