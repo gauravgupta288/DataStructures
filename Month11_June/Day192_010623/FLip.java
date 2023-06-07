@@ -4,7 +4,6 @@ public class FLip {
     public static void main(String[] args) {
 solve("");
     }
-
     static  int[] solve(String A){
         int index = 0;
         int l = 0;
