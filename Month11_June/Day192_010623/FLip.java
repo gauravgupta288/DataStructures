@@ -32,8 +32,6 @@ public class FLip {
                 r = i + 1;
                 best = cur;
             }
-
-
         }
         if (r == -1) {
             return new int[]{};
