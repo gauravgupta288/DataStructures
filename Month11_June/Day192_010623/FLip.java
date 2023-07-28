@@ -2,7 +2,7 @@ package Month11_June.Day192_010623;
 
 public class FLip {
     public static void main(String[] args) {
-        System.out.println(solve("dsfdf fsd f"));
+        System.out.println(solve(""));
     }
 
     static int[] solve(String A) {
