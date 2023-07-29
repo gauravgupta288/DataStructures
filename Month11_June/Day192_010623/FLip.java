@@ -36,7 +36,6 @@ public class FLip {
         if (r == -1) {
             return new int[]{};
         }
-
         return new int[]{l, r};
     }
 }
