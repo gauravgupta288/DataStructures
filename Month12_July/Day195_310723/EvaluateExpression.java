@@ -49,7 +49,7 @@ public class EvaluateExpression {
         } else if (ope.equals("*")) {
             return a * b;
         } else if (ope.equals("/")) {
-            return a / b;
+            return  b/a;
         } else {
             return -1;
         }
