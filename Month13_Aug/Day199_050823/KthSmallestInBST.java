@@ -16,7 +16,6 @@ class TreeNode {
 
 public class KthSmallestInBST {
 
-
     public int kthsmallest(TreeNode A, int B) {
 
         ArrayList<Integer> arr = new ArrayList<>();
