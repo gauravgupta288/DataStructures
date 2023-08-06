@@ -10,7 +10,6 @@ public class MergeTwoBST {
         List<Integer> list3 = new ArrayList<>();
 
         inorder(root1, list1);
-
         inorder(root2, list2);
 
         int i = 0;
