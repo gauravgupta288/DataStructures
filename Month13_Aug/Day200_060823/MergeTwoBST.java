@@ -3,6 +3,18 @@ package Month13_Aug.Day200_060823;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) {
+        val = x;
+        left=null;
+        right=null;
+    }
+}
 public class MergeTwoBST {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
         List<Integer> list1 = new ArrayList<>();
@@ -40,6 +52,10 @@ public class MergeTwoBST {
         }
 
         return list3;
+
+    }
+
+    void inorder(TreeNode A, List<Integer> list1 ){
 
     }
 }
