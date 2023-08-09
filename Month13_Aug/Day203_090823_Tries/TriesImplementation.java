@@ -9,7 +9,6 @@ class Node{
         isWordEnd = false;
     }
 }
-
 public class TriesImplementation {
     public static void main(String[] args) {
         Node node = new Node();
