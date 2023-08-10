@@ -1,46 +1,55 @@
 package Month13_Aug.Day203_090823_Tries;
 
-class Node{
+class Node {
     Node child[];
     boolean isWordEnd;
+    int fre;
 
-    Node(){
+    Node() {
         child = new Node[26];
         isWordEnd = false;
+        fre = 0;
     }
 }
+
 public class TriesImplementation {
     public static void main(String[] args) {
         Node node = new Node();
         insert(node, "apple");
         insert(node, "app");
-        System.out.println(search(node, "applee"));
+        System.out.println(searchPrefix(node, "aple"));
     }
-    public static void insert(Node node, String str){
+
+    public static void insert(Node node, String str) {
         Node temp = node;
-        for(int i = 0; i < str.length(); i++){
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if(temp.child[ch - 'a'] == null){
+            if (temp.child[ch - 'a'] == null) {
                 temp.child[ch - 'a'] = new Node();
             }
-
             temp = temp.child[ch - 'a'];
+            temp.fre++;
         }
-
         temp.isWordEnd = true;
     }
 
-    public static boolean search(Node node, String str){
+    public static String searchPrefix(Node node, String s) {
         Node temp = node;
-        for(int i = 0; i < str.length(); i++){
-            char ch = str.charAt(i);
-            if(temp.child[ch - 'a'] == null){
-                return false;
-            }else{
-                temp = temp.child[ch - 'a'];
+
+        StringBuilder sb = new StringBuilder();
+        for (char ch : s.toCharArray()) {
+
+            if(temp == null){
+                return sb.toString();
             }
+            if (temp.fre != 1) {
+                sb.append(ch);
+            }else {
+                return sb.toString();
+            }
+            temp = temp.child[ch - 'a'];
         }
 
-        return temp.isWordEnd;
+        return sb.toString();
     }
 }
