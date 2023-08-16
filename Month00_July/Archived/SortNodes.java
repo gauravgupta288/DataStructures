@@ -1,7 +1,7 @@
 package gg.Month00_July.Archived;
 
 
-class ListNode {
+public class ListNode {
     int val;
     ListNode next;
 
