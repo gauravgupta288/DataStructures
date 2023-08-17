@@ -23,7 +23,6 @@ public class Day210_170823_LinkedListPalin {
             slow = slow.next;
             fast = fast.next.next;
         }
-
         ListNode temp = reverse(slow);
 
         while(temp != null){
