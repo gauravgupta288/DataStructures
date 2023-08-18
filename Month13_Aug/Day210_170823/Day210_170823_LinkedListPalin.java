@@ -1,10 +1,5 @@
 package Month13_Aug.Day210_170823;
 
-class ListNode{
-    ListNode next;
-    int val;
-}
-
 public class Day210_170823_LinkedListPalin {
     public boolean isPalindrome(ListNode A) {
 
