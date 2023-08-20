@@ -1,38 +1,54 @@
-package Month13_Aug.Day212_190823_Heap_problems;
+package Month13_Aug.Day213_200823;
 
 import java.util.ArrayList;
 
-public class Heap {
+public class Solution {
     static int size = 0;
-    int capacity = 10;
-    int arr[] = new int[capacity];
 
     public static void main(String[] args) {
+
+        ArrayList<Integer> A = new ArrayList<>();
+
+        A.add(1);
+        A.add(2);
+        A.add(3); A.add(4);A.add(5);
+
+
+        System.out.println(solve(A));
+    }
+
+    public static int solve(ArrayList<Integer> A) {
+
+        // size = A.size();
+        //heapify(A);
+        int ans = 0;
+
         ArrayList<Integer> arr = new ArrayList<>();
 
-        push(arr, 5);
-        push(arr, 4);
-        push(arr, 2);
-        push(arr, 10);
-        push(arr, 12);
-        push(arr, 0);
+        //create min heap
+        for(int i : A){
+            push(arr, i);
+        }
+        size = getSize();
+        while(size > 1){
+            int first = pop(arr);
+            //size--;
+            int second = pop(arr);
+            //size--;
+            ans += first + second;
+            push(arr, first + second);
+            //size++;
+        }
 
-        pop(arr);
-        pop(arr);
+        return ans;
     }
 
-    public static void swap(ArrayList<Integer> arr, int i, int j) {
-        int temp = arr.get(i);
-        arr.set(i, arr.get(j));
-        arr.set(j, temp);
-    }
-
-    public static void heapify(int[] A) {
-
+    public static int getSize(){
+        return size;
     }
 
     public static int getParent(int index){
-          return ((index - 1) / 2);
+        return ((index - 1) / 2);
     }
     //TC - O(Logn) to insert a value
     public static void push(ArrayList<Integer> arr, int val){
@@ -57,9 +73,6 @@ public class Heap {
         return index * 2 + 1 + 1;
     }
 
-    public static int getSize(){
-        return size;
-    }
     public static int pop(ArrayList<Integer> arr){
 
         if(arr.size() == 0){
@@ -98,4 +111,12 @@ public class Heap {
         return ans;
     }
 
+    public static void swap(ArrayList<Integer> arr, int i, int j) {
+        if(i < 0 || j < 0){
+            return;
+        }
+        int temp = arr.get(i);
+        arr.set(i, arr.get(j));
+        arr.set(j, temp);
+    }
 }
