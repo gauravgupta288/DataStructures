@@ -9,10 +9,10 @@ public class Solution {
 
         ArrayList<Integer> A = new ArrayList<>();
 
-        A.add(1);
-        A.add(2);
-        A.add(3); A.add(4);A.add(5);
-
+        A.add(6);
+        A.add(19);
+        A.add(9); A.add(14);A.add(17);A.add(16);A.add(7);A.add(2);
+        A.add(14);A.add(4);A.add(3);
 
         System.out.println(solve(A));
     }
@@ -73,17 +73,20 @@ public class Solution {
         return index * 2 + 1 + 1;
     }
 
+    public static int peak(ArrayList<Integer> arr){
+        return arr.get(0);
+    }
     public static int pop(ArrayList<Integer> arr){
 
-        if(arr.size() == 0){
+        if (arr.size() == 0) {
             return -1;
         }
         int ans = arr.get(0);
         swap(arr, 0, size - 1);
         size--;
 
-        if(size == 2){
-            if(arr.get(0) > arr.get(1)){
+        if (size == 2) {
+            if (arr.get(0) > arr.get(1)) {
                 swap(arr, 0, 1);
             }
             return ans;
@@ -92,21 +95,19 @@ public class Solution {
         int left = getLeft(parent);
         int right = getRight(parent);
 
-        while(right < size){
-            //if left child is smaller
-            if(arr.get(parent) > arr.get(left) && arr.get(left) < arr.get(right)){
-                swap(arr, parent, left);
-                parent = left;
-            }
+        while (right < size) {
+            // Compare left and right children to find the smaller one
+            int smallerChild = (arr.get(left) < arr.get(right)) ? left : right;
 
-            // if right child is smaller
-            else if(arr.get(parent) > arr.get(right) && arr.get(right) < arr.get(left)){
-                swap(arr, parent, right);
-                parent = right;
+            // If the parent is greater than the smaller child, swap and continue
+            if (arr.get(parent) > arr.get(smallerChild)) {
+                swap(arr, parent, smallerChild);
+                parent = smallerChild;
+                left = getLeft(parent);
+                right = getRight(parent);
+            } else {
+                break;
             }
-
-            left = getLeft(parent);
-            right = getRight(parent);
         }
         return ans;
     }
