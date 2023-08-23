@@ -14,28 +14,28 @@ public class HeapSort {
 
         hs.print(arr);
     }
-    public void heapify(int arr[], int n, int i){
+        public void heapify(int arr[], int n, int i){
 
-        int lar = i;
+            int lar = i;
 
-        int l = 2 * i + 1;
-        int r = 2 * i + 2;
+            int l = 2 * i + 1;
+            int r = 2 * i + 2;
 
-        if(l < n && arr[l] > arr[lar]){
-            lar = l;
+            if(l < n && arr[l] > arr[lar]){
+                lar = l;
+            }
+            if(r < n && arr[r] > arr[lar]){
+                lar = r;
+            }
+
+            if(i != lar){
+                int s = arr[i];
+                arr[i] = arr[lar];
+                arr[lar] = s;
+
+                heapify(arr, n, lar);
+            }
         }
-        if(r < n && arr[r] > arr[lar]){
-            lar = r;
-        }
-
-        if(i != lar){
-            int s = arr[i];
-            arr[i] = arr[lar];
-            arr[lar] = s;
-
-            heapify(arr, n, lar);
-        }
-    }
 
     public void  heapSort(int arr[]){
 
