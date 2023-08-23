@@ -6,8 +6,6 @@ import java.util.PriorityQueue;
 public class HeapImplementaion {
     static ArrayList<Integer> arr;
 
-
-
     static int size;
 
     HeapImplementaion() {
@@ -17,10 +15,7 @@ public class HeapImplementaion {
     }
 
     public void insert(int val) {
-
-
         size++;
-
         int index = size;
 
         arr.add(index, val);
