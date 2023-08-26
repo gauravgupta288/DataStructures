@@ -7,7 +7,7 @@ public class PrintOneTwoN {
 
     static void print(int n){
         if(n==0){
-            return;
+            return ;
         }
         System.out.print(n + " ");
         print(n-1);
