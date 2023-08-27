@@ -12,4 +12,8 @@ public class Factorial {
 
         return n * solve(n - 1);
     }
+
+    static void sort(int arr[]){
+
+    }
 }
