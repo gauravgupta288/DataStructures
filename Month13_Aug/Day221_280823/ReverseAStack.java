@@ -6,21 +6,34 @@ public class ReverseAStack {
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
         Stack<Integer> ans = new Stack<>();
-        st.push(1); st.push(2); st.push(3);
+        st.push(1); st.push(10); st.push(3);
 
-        reverse(st, ans);;
+        reverse(st);;
 
         System.out.println();
     }
 
-    static void reverse(Stack st, Stack ans){
-        if(st.size() == 0){
+    static void reverse(Stack st){
+        if(st.size() == 1){
             return;
         }
 
         Object pe = st.pop();
-        ans.push(pe);
-        reverse(st, ans);
+        reverse(st);
+        insert(st, pe);
+        return;
 
+    }
+
+    static void insert(Stack s, Object t){
+        if(s.size() == 0){
+            s.push(t);
+            return;
+        }
+
+        Object pop = s.pop();
+        insert(s, t);
+        s.push(pop);
+        return ;
     }
 }
