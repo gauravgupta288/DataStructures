@@ -26,16 +26,16 @@ public class SubsetRecursion {
     static public void helper(int nums[], List<List<Integer>> ans, List<Integer> list, int i)
     {
         if(i == nums.length){
-            List<Integer> temp = Object.clone(list);
-            ans.add(temp);
+            ans.add(new ArrayList<>(list));
             return;
         }
+
+
 
         list.add(nums[i]);
         helper(nums, ans, list, i + 1);
 
-
-        list.remove(list.indexOf(nums[i]));
+        list.remove(list.size() - 1);
         helper(nums, ans, list, i + 1);
 
         return ;
