@@ -12,7 +12,8 @@ public class Test {
         ll.insertAtPosition(70, 4);
 
         ll.print();
-        System.out.println(ll.deleteFirst());
+        System.out.println("Total size of list is : " + ll.getSize());
+        System.out.println(ll.deleteLast());
         ll.print();
         System.out.println("Total size of list is : " + ll.getSize());
     }

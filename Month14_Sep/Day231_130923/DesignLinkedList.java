@@ -66,6 +66,7 @@ public class DesignLinkedList {
         Node x = new Node(val);
         x.next = temp.next;
         temp.next = x;
+        size++;
 
     }
 
@@ -85,8 +86,17 @@ public class DesignLinkedList {
         if(tail == null){
             return -1;
         }
+        int i = 0;
+        Node temp = head;
+        while(i < size - 1){
+            i++;
+            temp = temp.next;
+        }
 
-
+        tail = temp;
+        tail.next = null;
+        size--;
+        return tail.val;
     }
     public void print(){
         Node temp = head;
