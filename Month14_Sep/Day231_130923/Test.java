@@ -9,8 +9,10 @@ public class Test {
         ll.insertAtLast(50);
         ll.insertAtFirst(20);
         ll.insertAtFirst(30);
+        ll.insertAtPosition(70, 4);
 
-
+        ll.print();
+        System.out.println(ll.deleteFirst());
         ll.print();
         System.out.println("Total size of list is : " + ll.getSize());
     }

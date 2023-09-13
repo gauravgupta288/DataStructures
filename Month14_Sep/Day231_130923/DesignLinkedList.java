@@ -45,6 +45,49 @@ public class DesignLinkedList {
 
     }
 
+    public void insertAtPosition(int val, int pos){
+
+        if(pos == 0){
+            insertAtFirst(val);
+            return;
+        }
+        if(size <= pos){
+            insertAtLast(val);
+            return;
+        }
+
+        Node temp = head;
+        int i = 0;
+        while (i < pos - 1 && temp != null){
+            temp = temp.next;
+            i++;
+        }
+
+        Node x = new Node(val);
+        x.next = temp.next;
+        temp.next = x;
+
+    }
+
+    public int deleteFirst(){
+
+        if(head == null){
+            return -1;
+        }
+
+        int temp = head.val;
+        head = head.next;
+        size--;
+        return temp;
+    }
+
+    public int deleteLast(){
+        if(tail == null){
+            return -1;
+        }
+
+
+    }
     public void print(){
         Node temp = head;
 
