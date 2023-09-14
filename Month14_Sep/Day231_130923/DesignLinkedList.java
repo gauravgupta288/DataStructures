@@ -32,7 +32,6 @@ public class DesignLinkedList {
         Node temp = new Node(val);
 
         size++;
-
         if(tail == null){
             tail = temp;
             head = tail;
