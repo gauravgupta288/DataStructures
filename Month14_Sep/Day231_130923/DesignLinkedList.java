@@ -30,7 +30,6 @@ public class DesignLinkedList {
 
     public void insertAtLast(int val){
         Node temp = new Node(val);
-
         size++;
         if(tail == null){
             tail = temp;
