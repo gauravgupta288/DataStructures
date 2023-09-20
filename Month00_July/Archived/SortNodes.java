@@ -1,14 +1,14 @@
 package Month13_Aug.Day210_170823;
 
 
-class ListNode {
+public class ListNode {
     int val;
     ListNode next;
 
     ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
