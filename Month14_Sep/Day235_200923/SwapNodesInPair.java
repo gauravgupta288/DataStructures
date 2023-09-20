@@ -4,6 +4,10 @@ package Month14_Sep.Day235_200923;
 class ListNode{
     int val;
     ListNode next;
+
+    ListNode(int val){
+        this.val = val;
+    }
 }
 
 public class SwapNodesInPair {
