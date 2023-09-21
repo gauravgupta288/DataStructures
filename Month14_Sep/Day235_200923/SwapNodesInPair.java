@@ -18,7 +18,6 @@ public class SwapNodesInPair {
     public ListNode swapPairs(ListNode head) {
 
         ListNode start = new ListNode(0);
-
         start.next = head;
 
         ListNode cur = start;
