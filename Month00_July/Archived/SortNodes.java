@@ -1,7 +1,7 @@
 package Month13_Aug.Day210_170823;
 
 
-public class ListNode {
+class ListNode {
     int val;
     ListNode next;
 
