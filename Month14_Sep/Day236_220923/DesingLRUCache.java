@@ -64,7 +64,6 @@ public class DesingLRUCache {
     }
 
     public static void main(String[] args) {
-
         DesingLRUCache cache = new DesingLRUCache(2);
         System.out.println(cache.get(2));
         cache.put(2,6);
