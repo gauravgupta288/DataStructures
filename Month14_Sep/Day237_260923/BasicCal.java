@@ -41,7 +41,6 @@ public class BasicCal {
                     stack.push(ch);
                 }
 
-
             }else if(ch == '(' || ch == '^'){
                 stack.push(ch);
             }
