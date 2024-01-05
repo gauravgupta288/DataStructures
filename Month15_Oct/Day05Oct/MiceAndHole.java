@@ -6,6 +6,9 @@ import java.util.Collections;
 
 public class MiceAndHole {
     public static void main(String[] args) {
+
+        int a[] = {1,3,2,4,5};
+        int b[] = {10,5,4,3,5};
         System.out.println(mice(new ArrayList<>(Arrays.asList(-4, 2, 3)), new ArrayList<>(Arrays.asList(0, -2, 4))));
     }
 
