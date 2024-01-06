@@ -3,6 +3,7 @@ package Month15_Oct.Day05Oct;
 public class Maze {
     public static void main(String[] args) {
         count("", 2, 2);
+        System.out.println(count(3,3));
     }
 
     public static void count(String str, int row, int col){
@@ -18,5 +19,16 @@ public class Maze {
         if(col > 1){
             count(str + 'R', row, col - 1);
         }
+    }
+
+    public static int count(int row, int col){
+        if(row == 1 || col == 1){
+            return 1;
+        }
+
+        int left = count(row - 1, col);
+        int right = count(row, col - 1);
+
+        return left + right;
     }
 }
