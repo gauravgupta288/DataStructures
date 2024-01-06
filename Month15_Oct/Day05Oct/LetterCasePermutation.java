@@ -32,3 +32,13 @@ public class LetterCasePermutation {
         return ans;
     }
 }
+
+class A extends LetterCasePermutation{
+
+}
+
+class B{
+    public static void main(String[] args) {
+        LetterCasePermutation obj = new A();
+    }
+}
