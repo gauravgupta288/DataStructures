@@ -3,23 +3,24 @@ package Backtracking;
 import java.util.ArrayList;
 
 public class Subset {
-    private  static ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
     public static void main(String[] args) {
-        subset(new int[]{1,2,3}, new ArrayList<>(), 0);
+        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+        subset(new int[]{1,2,3}, list, 0, ans);
         System.out.println();
     }
 
-    public static void subset(int[] arr, ArrayList<Integer> arrayList, int n){
+    public static void subset(int[] arr, ArrayList<Integer> arrayList, int n, ArrayList<ArrayList<Integer>> ans){
         if(n == arr.length){
-            ans.add(arrayList);
+            ans.add(new ArrayList<>(arrayList));
             return;
         }
 
-        for(int i = n; i < arr.length; i++){
-            arrayList.add(arr[i]);
-            subset(arr, arrayList, n + 1);
+            arrayList.add(arr[n]);
+            subset(arr, arrayList, n + 1, ans);
             arrayList.remove(arrayList.size() - 1);
-        }
+        subset(arr, arrayList, n + 1, ans);
 
+        return;
     }
 }
