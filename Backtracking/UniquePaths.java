@@ -1,11 +1,14 @@
 package Backtracking;
 
+import java.util.List;
+
 public class UniquePaths {
     static int ans = 0;
     public static void main(String[] args) {
         System.out.println(uniquePathsIII(new int[][]{{1,0,0,0}, {0,0,0,0}, {0,0,0,2}}));
     }
     public static int uniquePathsIII(int[][] A) {
+        List<Integer> list;
         int zeroCount = 0;
         int n = 0;
 
