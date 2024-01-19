@@ -1,52 +1,52 @@
 package Backtracking;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.PriorityQueue;
 
 public class Median {
     public static void main(String[] args) {
         MedianFinder m = new MedianFinder();
         m.addNum(1);
+
+        m.addNum(3);
+
         m.addNum(2);
         System.out.println(m.findMedian());
 
-        m.addNum(3);
-        System.out.println(m.findMedian());
     }
 
 
 }
 
 class MedianFinder {
-    int len = 0;
-    List<Integer> list;
+    PriorityQueue<Integer> small;
+    PriorityQueue<Integer> large;
+    boolean even = true;
 
     public MedianFinder() {
-        list = new ArrayList<>();
+        small  = new PriorityQueue<>(Collections.reverseOrder());
+        large = new PriorityQueue<>();
+
     }
 
     public void addNum(int num) {
-        list.add(num);
-        len++;
+
+        if(even){
+            large.offer(num);
+            small.offer(large.poll());
+        }else{
+            small.offer(num);
+            large.offer((small.poll()));
+        }
+        even = !even;
     }
 
     public double findMedian() {
-        int k;
-        int j;
 
-        if((len & 1) == 0){
-            k = len /2;
-            j = k - 1;
-
-
-            int m = list.get(k);
-            int n = list.get(j);
-
-            return (double)(m + n)/2;
+        if(even){
+            return (small.peek() + large.peek()) / 2.0;
         }else{
-            k = len / 2;
-
-            return list.get(k);
+            return small.peek();
         }
     }
 }
