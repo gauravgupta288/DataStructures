@@ -6,7 +6,10 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Database {
     private static Database db = null;
 
-    private synchronized Database getInstance(){
+    private Database(){
+
+    }
+    public static Database getInstance(){
         Lock lock = new ReentrantLock();
 
 
