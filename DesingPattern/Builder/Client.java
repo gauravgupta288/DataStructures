@@ -9,7 +9,6 @@ public class Client {
                 .setRoll(101)
                 .setUniName("Pune Uni")
                 .build();
-
         System.out.println(student);
     }
 }
