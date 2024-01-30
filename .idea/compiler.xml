@@ -8,13 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Arrays" />
         <module name="Strings" />
-        <module name="DataStructures" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Arrays" target="10" />
-      <module name="DataStructures" target="17" />
-      <module name="Strings" target="10" />
+      <module name="TickTokToe" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
