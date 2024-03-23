@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Arrays" />
         <module name="Strings" />
+        <module name="DesignPattern" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
