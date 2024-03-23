@@ -1,9 +1,6 @@
 package JavaConcepets;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
@@ -28,6 +25,26 @@ public class StreamMaps {
         System.out.println(com.compare(3,2));
 
         compare();
+
+        streamApi();
+
+        // Generate a large list of integers
+        List<Integer> numbers = generateLargeList();
+
+        // Calculate sum of squares sequentially
+        long startTimeSeq = System.currentTimeMillis();
+        long sumOfSquaresSeq = calculateSumOfSquaresSequential(numbers);
+        long endTimeSeq = System.currentTimeMillis();
+        System.out.println("Sequential sum of squares: " + sumOfSquaresSeq);
+        System.out.println("Sequential time taken: " + (endTimeSeq - startTimeSeq) + " ms");
+
+        // Calculate sum of squares in parallel
+        long startTimeParallel = System.currentTimeMillis();
+        long sumOfSquaresParallel = calculateSumOfSquaresParallel(numbers);
+        long endTimeParallel = System.currentTimeMillis();
+        System.out.println("Parallel sum of squares: " + sumOfSquaresParallel);
+        System.out.println("Parallel time taken: " + (endTimeParallel - startTimeParallel) + " ms");
+
     }
 
     public static void compare(){
@@ -38,5 +55,36 @@ public class StreamMaps {
         System.out.println(li);
         Collections.sort(li, com);
         System.out.println(li);
+    }
+
+    public static void  streamApi(){
+        List<String> stringList = Arrays.asList("j", "helljj", "yeah", "java", "hello");
+
+        for(int i = 0; i < 5; i++){
+            Optional<String> len = stringList.parallelStream().filter(name -> name.startsWith("j")).findAny();
+
+            System.out.println(len.get());
+        }
+
+
+    }
+
+    // Generate a large list of integers
+    public static List<Integer> generateLargeList() {
+        return List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10_000_000);
+    }
+
+    // Calculate sum of squares sequentially
+    public static long calculateSumOfSquaresSequential(List<Integer> numbers) {
+        return numbers.stream()
+                .mapToLong(num -> num * num)
+                .sum();
+    }
+
+    // Calculate sum of squares in parallel
+    public static long calculateSumOfSquaresParallel(List<Integer> numbers) {
+        return numbers.parallelStream()
+                .mapToLong(num -> num * num)
+                .sum();
     }
 }
