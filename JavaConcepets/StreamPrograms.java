@@ -28,7 +28,6 @@ public class StreamPrograms {
 
         List<Integer> myList1 = Arrays.asList(10,15,8,49,25,98,98,32,15);
 
-
         Integer max = myList1.stream().min(Integer::compare).get();
 
         System.out.println(max);

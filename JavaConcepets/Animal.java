@@ -1,8 +1,9 @@
 package JavaConcepets;
 
 public interface Animal {
+    public static final int a = 790;
     public default void run() {
-        System.out.println("Run");
+        System.out.println("Run" + a);
     }
 
     void eat();
@@ -12,7 +13,7 @@ class Cat implements Animal{
 
     @Override
     public void eat() {
-        System.out.println("Cat is eating");
+        System.out.println("Cat is eating" + a);
     }
 }
 
@@ -24,4 +25,10 @@ class Run{
         ani.run();
     }
 
+}
+
+abstract class Shape{
+    int a = 10;
+
+    abstract void test();
 }
