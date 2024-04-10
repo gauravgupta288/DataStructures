@@ -1,27 +1,33 @@
 package JavaConcepets;
 
-public class ThreadConcept {
+import java.util.concurrent.locks.ReentrantLock;
+
+public class ThreadConcept implements Runnable{
+    ReentrantLock lock = new ReentrantLock();
+    volatile int j = 1;
+    @Override
+    public void run() {
+
+        for(int i = 1; i <= 50; i++){
+           // lock.lock();
+            System.out.println("thread name " + Thread.currentThread().getName() + " Number is : " + j++);
+            //lock.unlock();
+            }
+
+        String t = "abcde";
+
+        System.out.println(t.substring(1));
+    }
+
     public static void main(String[] args) {
-        Thread t = new Thread(() ->{
-            for(int i = 0; i < 10; i++){
-                System.out.println(i);
-            }
-        });
 
-        Thread t1 = new Thread(() ->{
-            for(int i = 0; i < 1000; i++){
-                System.out.println(i);
-            }
-        });
-
-//        Long stime = System.currentTimeMillis();
-//        t.start();
-//
-//        t1.start();
-//        Long etime = System.currentTimeMillis();
-//
-//        System.out.println("time : " +  (etime - stime));
-
+        ThreadConcept tr = new ThreadConcept();
+        Thread t1 = new Thread(tr);
+        t1.start();
+        Thread t2 = new Thread(tr);
+        t2.start();
 
     }
+
+
 }

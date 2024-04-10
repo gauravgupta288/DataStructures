@@ -3,10 +3,16 @@ package JavaConcepets;
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class StreamMaps {
     public static void main(String[] args) {
         List<Integer> list = List.of(1,2,3,4,5,5,6,67,8,7);
+
+        List<Integer> list1 = list.stream().limit(list.size()/2).collect(Collectors.toList());
+
+        List<Integer> list2 = list.stream().skip(list.size()/2).collect(Collectors.toList());
+        System.out.println(list2);
 
         long t = list.stream().filter(l -> l % 2 == 0).mapToInt(Integer::intValue).sum();
 
