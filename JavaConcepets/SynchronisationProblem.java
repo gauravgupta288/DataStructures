@@ -37,11 +37,11 @@ class Subratractor implements Runnable{
         this.lock = lock;
     }
     @Override
-    public synchronized void run() {
+    public void run() {
         for(int i = 0;i< 100000;i++){
-            lock.lock();
-            count.val -= i;
-            lock.unlock();
+            synchronized (count){
+                count.val -= i;
+            }
         }
         int n;
         if((n = count.val) == 0){
@@ -59,11 +59,11 @@ class Adder implements Runnable{
         this.lock = lock;
     }
     @Override
-    public synchronized void run() {
+    public void run() {
         for(int i = 0;i< 100000;i++){
-            lock.lock();
-            count.val += i;
-            lock.unlock();
+            synchronized (count){
+                count.val += i;
+            }
         }
     }
 }
