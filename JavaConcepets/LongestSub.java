@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class LongestSub {
     public static void main(String[] args) {
-        System.out.println(maximumUniqueSubarray(new int[]{4,5,6,4,7,7,8,10}));
+        System.out.println(maximumUniqueSubarray(new int[]{4,5,6,4,7}));
     }
 
     public static int maximumUniqueSubarray(int[] n) {
@@ -13,9 +13,10 @@ public class LongestSub {
 
         Set<Integer> nm=new HashSet<>();
 
-        for(int l = 0;l<len;l++){
-            nm.add(l);
+        for(int k = 0; k < 1000; k++){
+            nm.add(k);
         }
+
         while(i < len && j < len)
         {
             if(!nm.contains(n[j]))
